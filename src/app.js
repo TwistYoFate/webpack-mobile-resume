@@ -1,6 +1,6 @@
 import React from 'react'
 import reactDOM from 'react-dom'
-import App_mobile from '../components/App.mobile'
+import App_mobile from './components/App.mobile'
 
 
 

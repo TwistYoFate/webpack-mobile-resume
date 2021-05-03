@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+$animation-time:0.3s;
+$font-light:'Raleway', sans-serif;
+$font-bold:'Raleway:wght@500', sans-serif;
+$factor:1.3;
+
+$text-left-before:2000px;
+$text-left-after:150px;
+$text-bottom-before:2300px;
+$text-bottom-after:2300px;
+
+//Text
+$font-size-normal:50px;
+$color-sand:#FAE3AD;
+$color-dark-grey:#597588;
+$color-light-grey:#A9BCC1;
+
+html, body {
+    background:$color-light-grey;
+    margin:0;
+    padding:0;
+    // overflow-y: hidden;
+    overflow-x: hidden;
+    // overflow:hidden;
+    zoom:50%;
+    scroll-behavior: smooth;
+}
+
+#cover{
+    width:1080px;
+
+    #wpap{
+        position:relative;
+        padding-left:5%;
+        z-index:3;
+        animation-name: wpap-in;
+      animation-duration: $animation-time;
+    }
+    
+    #Me_wpap{
+        height:1861.379px*$factor;
+        width:1406.144px*$factor;
+    }
+    
+    @keyframes wpap-in {
+        from {padding-left:100%;}
+        to {padding-left:5%;}
+    }
+    
+    
+    //Poly background
+    #poly-back{
+        position:relative;
+        bottom:1300px;
+        left:-50px;
+        z-index:1;
+        animation-name: poly-back-in;
+        animation-duration: $animation-time;
+        animation-fill-mode: backwards;
+    }
+    #poly-back svg{
+        height:1600px;
+        width:1200px;
+    }
+    
+    @keyframes poly-back-in {
+        from {bottom:-1000px;}
+        to {bottom:1300px;}
+    }
+    
+    //Hi 
+    $hi-left-before:2000px;
+    
+    #hi{
+        position:relative;
+        bottom:$text-bottom-after;
+        left:$text-left-after;
+        // font-family: $font-bold;
+        // font-size: 180px;
+        z-index:2;
+        opacity:100%;
+        animation-name: hi-in;
+        animation-duration: $animation-time;
+        animation-fill-mode: backwards;
+        animation-delay: 0.6s;
+    }
+    
+    @keyframes hi-in {
+        from{left:$text-left-before;}
+        to{left:$text-left-after;opacity:100%;}
+    }
+    
+    //IM
+    
+    #im{
+        position:relative;
+        bottom:$text-bottom-after - 20px;
+        left:$text-left-after;
+        // font-family: $font-bold;
+        // font-size: 180px;
+        z-index:2;
+        opacity:100%;
+        animation-name: im-in;
+        animation-duration: $animation-time;
+        animation-fill-mode: backwards;
+        animation-delay: 0.9s;
+    }
+    
+    @keyframes im-in {
+        from{bottom:$text-bottom-before;opacity:0%;}
+        to{bottom:$text-bottom-after - 20px;opacity:100%;}
+    }
+    
+    //DY
+    #deepanshu{
+        position:relative;
+        bottom:$text-bottom-after - 40px;
+        left:$text-left-after;
+        // font-family: $font-bold;
+        // font-size: 180px;
+        z-index:4;
+        opacity:100%;
+        animation-name: deepanshu-in;
+        animation-duration: $animation-time;
+        animation-fill-mode: backwards;
+        animation-delay: 1.2s;
+    }
+    
+    @keyframes deepanshu-in {
+        from{bottom:$text-bottom-before;opacity:0%;}
+        to{bottom:$text-bottom-after - 40px;opacity:100%;}
+    }
+    
+    //yadav
+    #yadav{
+        position:relative;
+        bottom:$text-bottom-after - 30px;
+        left:$text-left-after;
+        // font-family: $font-bold;
+        // font-size: 180px;
+        z-index:4;
+        opacity:100%;
+        animation-name: yadav-in;
+        animation-duration: $animation-time;
+        animation-fill-mode: backwards;
+        animation-delay: 1.5s;
+    }
+    
+    @keyframes yadav-in {
+        from{bottom:$text-bottom-before;opacity:0%;}
+        to{bottom:$text-bottom-after - 30px;opacity:100%;}
+    }
+    
+    //poly
+    #poly1{
+        position:relative;
+        bottom:$text-bottom-after + 1200px;
+        left:$text-left-after;
+        // font-family: $font-bold;
+        // font-size: 180px;
+        z-index:4;
+        opacity:20%;
+    
+        animation-name: poly-in;
+        animation-duration: 5s;
+        animation-fill-mode: backwards;
+        animation-delay: 1.7s;
+        animation-iteration-count: infinite;
+    
+    }
+    
+    #poly2{
+        position:relative;
+        bottom:$text-bottom-after + 1100px;
+        left:$text-left-after + 100px;
+        // font-family: $font-bold;
+        // font-size: 180px;
+        z-index:4;
+        opacity:40%;
+        
+        animation-name: poly-in;
+        animation-duration: 10s;
+        animation-fill-mode: forwards;
+        animation-delay: 1.9s;
+        animation-iteration-count: infinite;
+    }
+    
+    #poly3{
+        position:relative;
+        bottom:$text-bottom-after + 1900px;
+        left:$text-left-after - 50px;
+        // font-family: $font-bold;
+        // font-size: 180px;
+        z-index:4;
+        opacity:40%;
+        
+        animation-name: poly-in;
+        animation-duration: 10s;
+        animation-fill-mode: forwards;
+        animation-delay: 2.1s;
+        animation-iteration-count: infinite;
+    }
+    
+    @keyframes poly-in {
+        0%{transform: rotateX(0deg);opacity:0%;}
+        50%{transform: rotateX(180deg);opacity:100%;}
+        100%{transform: rotateX(359deg);opacity:0%;}
+    }
+    
+    #tap{
+        position:relative;
+        bottom:$text-bottom-after + 550px;
+        font-size: 50px;
+        left:1100px;
+        color:black; //#fae3aD
+        // background-color: cadetblue;
+        font-family: $font-bold;
+        z-index: 5;
+        animation-name: tap-in;
+        animation-duration: 2s;
+        animation-fill-mode: backwards;
+        animation-delay: 2.2s;
+        animation-iteration-count: infinite;
+    }
+    
+    @keyframes tap-in{
+        0%{opacity:0%;}
+        50%{opacity:100%;}
+        100%{opacity:0%;}
+    }
+    
+    //tap-cover for tap anywhere
+    // #tap-cover{
+    //     z-index:20;
+    //     width:1600px;
+    //     height:2800px;
+    //     position:relative;
+    //     background-color:black;
+    //     bottom:5500px;
+    // }
+    
+    
+    
+    
+    
+    
+    // INTRO COMPONENT
+    
+    //poly-header
+    $factor-poly-headerx:1.32;
+    #poly-headerx{
+        position:relative;
+        bottom:$text-bottom-after + 550px;
+        left:-50px;
+        z-index:3;
+        // animation-name: poly-back-in;
+        // animation-duration: $animation-time;
+        // animation-fill-mode: backwards;
+    }
+    #poly-headerx svg{
+        width:1257.619px * $factor-poly-headerx;
+        height:463.024px * $factor-poly-headerx;
+    }
+    
+    //brand
+    #brandx{
+        position:relative;
+        bottom:$text-bottom-after + 100px;
+        left:50px;
+        z-index:5;
+    }
+    
+    
+    #intro{
+        width:100%;
+        position: relative;
+        background: linear-gradient(0deg, $color-sand 0%, #A9BCC1 100%);
+        border-radius: 50px;
+        
+        box-shadow: 5px 5px 5px grey;
+
+        position:relative;
+        font-size: $font-size-normal;
+        font-family: $font-light;
+        bottom:$text-bottom-after + 550px;
+        z-index:6;
+        
+        padding:100px 22% 100px 23%;
+
+        #resume-button{
+            height:100px;
+            width:300px;
+            font-size: 50px;
+            border-radius: 50px;
+            border-color: black;
+            background: transparent;
+            box-shadow: 10px 10px 10px grey;
+            a{
+                text-decoration: 0;
+            }
+        }
+
+        #mail-button{
+            height:100px;
+            width:700px;
+            font-size: 50px;
+            border-radius: 50px;
+            border-color: black;
+            background: transparent;
+            box-shadow: 10px 10px 10px grey;
+            a{
+                text-decoration: 0;
+            }
+        }
+
+        button{
+            background:linear-gradient(0deg,$color-sand 0%,$color-light-grey 35%,$color-sand 100%);
+            border-radius: "20px";
+        }
+        a{
+            color: "#0B3150"; 
+            background-color: 'transparent'; 
+            border:"5px";
+            padding: "5px 20px 5px 20px"; 
+            text-decoration: 0;
+        }
+    
+        a img{
+            height:200px;
+            width:300px;
+        }
+
+        #slambook-button{
+            height:100px;
+            width:400px;
+            font-size: 50px;
+            border-radius: 50px;
+            border-color: black;
+            background: transparent;
+            box-shadow: 10px 10px 10px grey;
+            text-decoration: 0;
+        }
+
+        #linkedin-button{
+            height:100px;
+            width:400px;
+            font-size: 50px;
+            border-radius: 50px;
+            border-color: black;
+            background: transparent;
+            box-shadow: 10px 10px 10px grey;
+            text-decoration: 0;
+        }
+    }
+
+}
+
+
+
+
+
+
+
+

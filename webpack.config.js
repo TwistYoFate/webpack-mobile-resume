@@ -1,17 +1,28 @@
 const path = require('path')
+require('dotenv')
+const HTMLWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
     entry: "./src/app.js",
     output:{
         filename:'myBundle.js',
         path: path.resolve(__dirname,'dist'),
+        publicPath:'',
         // publicPath: path.resolve(__dirname,'public'),
+        clean:true
     },
     devServer:{
         port:9000,
         contentBase:path.resolve(__dirname,'dist'),
         hot:true
     },
+    plugins:[
+        new HTMLWebpackPlugin({
+            template:'./src/index.html',
+            filename:'index.html',
+            inject:'body'
+        })
+    ],
     module:{
         rules:[
             {
@@ -34,5 +45,5 @@ module.exports = {
             }
         ]
     },
-    mode:"development",
+    mode:process.env.MODE=="production"?"production":"development",
 }
