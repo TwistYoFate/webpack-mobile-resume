@@ -1,0 +1,37 @@
+$xs:0px;
+$sm:600px;
+$md:960px;
+$lg:1280px;
+$xl:1920px;
+
+
+@mixin hide($width){
+    @media (min-width:$width){
+        display:none;
+    }
+}
+
+@mixin box($color){
+    height:10vh;
+    width:10vw;
+    background-color: $color;
+}
+
+.flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.item1{
+    @include box(red);
+    @include hide($sm);
+}
+.item2{
+    @include box(green);
+    @include hide($md);
+}
+.item3{
+    @include box(blue);
+    @include hide($lg);
+}

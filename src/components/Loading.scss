@@ -1,0 +1,54 @@
+@font-face{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    src: url('../assets/fonts/impact.ttf');
+}
+
+$base-color:#0B3150;
+$secondary-color:#A9BCC1;
+$primary-color:#FAE3AD;
+$rise-color:$base-color;
+$fall-color:$primary-color;
+
+#loader{
+    position:relative;
+    display: flex;
+    background-color: $primary-color;
+    align-items: center;
+        justify-content: center;
+    height:100vh;
+    width:100vw;
+
+    #loading{
+        position:relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height:60px;
+        width:200px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 50px;
+
+        animation-name: border-animation;
+        animation-iteration-count: infinite;
+        animation-duration: 1s;
+        animation-timing-function:step-end;
+        border:5px solid $primary-color;
+    }
+
+    @keyframes border-animation{
+    
+        10%{border-left-color:$rise-color}
+        20%{border-top-color: $rise-color}
+        30%{border-right-color: $rise-color}
+        40%{border-bottom-color: $rise-color}
+        50%{border-bottom-color: $rise-color}
+        60%{border-left-color:$fall-color}
+        70%{border-top-color: $fall-color}
+        80%{border-right-color: $fall-color}
+        90%{border-bottom-color: $fall-color}
+        100%{border-bottom-color: $fall-color}
+    }
+}
+
+
+

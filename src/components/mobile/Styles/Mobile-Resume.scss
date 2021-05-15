@@ -22,11 +22,23 @@ html, body {
     // overflow-y: hidden;
     overflow-x: hidden;
     // overflow:hidden;
-    zoom:50%;
+    // zoom:50%;
+    // transform:scale(0.5,0.5);
     scroll-behavior: smooth;
 }
 
 #cover{
+    // position:absolute;
+    // left:-15vw;
+    // top:-146vh;
+    // transform: scale(0.67,0.67);
+
+    //note 5 pro
+    position:absolute;
+    overflow-x:none;
+    // left:-15vw;
+    // top:-500vh;
+    // transform: scale(0.6,0.6);
     width:1080px;
 
     #wpap{

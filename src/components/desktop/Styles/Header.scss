@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+$xs:0px;
+$sm:600px;
+$md:960px;
+$lg:1280px;
+$xl:1920px;
+
+
+$base-color:#0B3150;
+$secondary-color:#A9BCC1;
+$primary-color:#FAE3AD;
+
+$anim-dur:0.5s;
+$anim-start-delay:0.5s;
+
+@media (min-width:$lg){
+    @mixin flex($dir:row,$justify:center,$wrap:wrap){
+        display: flex;
+        flex-direction: $dir;
+        justify-content: $justify;
+        flex-wrap: $wrap;
+    }
+    
+    @mixin flex-item($basis:100%){
+        flex-basis: $basis;
+    }
+    
+    
+    header{
+        position:relative;
+        background-color: white;
+        height:100vh;
+        width:100vw;
+        @include flex;
+    }
+    
+    #face-wrapper{
+        position:relative;
+        // align-self: center;
+        z-index:2;
+        @include flex-item(33%);
+        // background-color: rgb(172, 82, 255);
+        width:33vw;
+        height:50vw;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+
+        animation-name: drop-anim;
+        animation-duration:$anim-dur;
+        animation-fill-mode: backwards;
+        animation-delay: $anim-start-delay + 0.5s;
+        top:0px;
+
+        svg{
+            transform: scale(1,1);
+        }
+    }
+    
+    #nameIntro-wrapper{
+        position:relative;
+        align-self: center;
+        z-index:2;
+        @include flex-item(33%);
+        // background-color: violet;
+
+        animation-name: reveal-from-right;
+        animation-duration:$anim-dur;
+        animation-fill-mode: backwards;
+        animation-delay: $anim-start-delay + 1s;
+        animation-timing-function:ease-out;
+        left:0px;
+        
+        svg{
+            // padding-left:8vw;
+            transform: scale(0.7,0.7);
+        }
+    }
+    
+    #introText-wrapper{
+        position:relative;
+        align-self: center;
+        z-index:2;
+        @include flex-item(33%);
+        // background-color: blueviolet;
+        width:33%;
+
+        animation-name: reveal-from-left;
+        animation-duration:$anim-dur;
+        animation-fill-mode: backwards;
+        animation-delay: $anim-start-delay + 1s;
+        animation-timing-function:ease-out;
+        left:0px;
+
+        p{
+            font-size:1rem;
+            font-family:'Roboto', sans-serif;
+            // text-align: right;
+            color: $primary-color;
+            text-align:end;
+            padding: 0 4vw 0 4vw;
+        }
+    }
+    
+    #curtain-wrapper{
+        position:absolute;
+        top:0;
+        z-index:2;
+        animation-name: drop-anim;
+        animation-duration:$anim-dur;
+        animation-fill-mode: backwards;
+        animation-delay: $anim-start-delay;
+        top:0px;
+        svg{
+            height:auto;
+            width:100vw;
+        }
+    }
+
+    //animations
+
+    @keyframes drop-anim{
+        0%{top:-1000px;}
+        100%{top:0;}
+    }
+
+    @keyframes reveal-from-right {
+        0%{left:100px;opacity:0;}
+        100%{left:0px;opacity:1;}
+    }
+
+    @keyframes reveal-from-left {
+        0%{left:-100px;opacity:0;}
+        100%{left:0px;opacity:1;}
+    }
+
+    //poly
+    #poly1{
+        position:absolute;
+        // background-color: green;
+        left:20vw;
+        top:10vh;
+        svg{
+            height:80px;
+            width:80px;
+
+            opacity:0%;
+            animation-name: poly-in;
+            animation-duration: 5s;
+            animation-fill-mode: backwards;
+            animation-delay: 2.9s;
+            animation-iteration-count: infinite;
+        }
+        // font-family: $font-bold;
+        // font-size: 180px;
+        z-index:4;
+    }
+    
+    #poly2{
+        position:absolute;
+        // background-color: blue;
+        // bottom:$text-bottom-after + 1100px;
+        left:70vw;
+        top:70vh;
+        // font-family: $font-bold;
+        // font-size: 180px;
+        z-index:10;
+        opacity:40%;
+        svg{
+            height:50px;
+            width:50px;
+
+            opacity:0%;
+            animation-name: poly-in;
+            animation-duration: 10s;
+            animation-fill-mode: forwards;
+            animation-delay: 2.6s;
+            animation-iteration-count: infinite;
+        }        
+    }
+    
+    #poly3{
+        position:absolute;
+        // background-color: red;
+        left:80vw;
+        top:10vh;
+        svg{
+            height:100px;
+            width:100px;
+
+            opacity:0%;
+            animation-name: poly-in;
+            animation-duration: 15s;
+            animation-fill-mode: forwards;
+            animation-delay: 2.3s;
+            animation-iteration-count: infinite;
+        }
+        // bottom:$text-bottom-after + 1900px;
+        // left:300px;
+        // font-family: $font-bold;
+        // font-size: 180px;
+        z-index:10;
+    }
+
+    #poly4{
+        position:absolute;
+        // background-color: violet;
+        left:30vw;
+        top:70vh;
+        svg{
+            height:100px;
+            width:100px;
+
+            opacity:0%;
+            animation-name: poly-rotate;
+            animation-duration: 20s;
+            animation-fill-mode: backwards;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+        }
+        // bottom:$text-bottom-after + 1900px;
+        // left:300px;
+        // font-family: $font-bold;
+        // font-size: 180px;
+        z-index:10;
+        
+        
+        
+    }
+
+    @keyframes poly-rotate {
+        0%{transform: rotateZ(0deg);opacity:0%;}
+        50%{transform: rotateZ(180deg);opacity:100%;}
+        100%{transform: rotateZ(359deg);opacity:0%;}
+    }
+
+
+    @keyframes poly-in {
+        0%{transform: rotateX(0deg);opacity:0%;}
+        50%{transform: rotateX(180deg);opacity:100%;}
+        100%{transform: rotateX(359deg);opacity:0%;}
+    }
+}

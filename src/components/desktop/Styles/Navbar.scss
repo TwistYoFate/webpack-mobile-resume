@@ -1,0 +1,60 @@
+@font-face{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    src: url('../../../assets/fonts/impact.ttf');
+}
+
+$base-color:#0B3150;
+$secondary-color:#A9BCC1;
+$primary-color:#FAE3AD;
+
+#nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index: 100;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+    #nav-list{
+        /* background-color: transparent; */
+        position:relative;
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding:0.5rem 0 0.5rem 0;
+        /* align-content: center; */
+        /* background-color: burlywood; */
+        width:100%;
+        background-color: $primary-color;
+    }
+    #nav-list:hover{
+        // background-color: $primary-color;
+        color:$base-color;
+        animation-play-state: running;
+        
+    }
+    
+    @keyframes fill-bar{
+        /* 0%{position:absolute;align-content: center;} */
+        /* 100%{background-color: linear-gradient(row,aquamarine 100%,white 0%);} */
+    }
+    
+    .nav-item{
+        position:relative;
+        /* height:100%; */
+        color:black;
+        margin:0 0.5rem 0 0.5rem;
+        font-size: 1rem;
+        align-self: center;
+        cursor:pointer;
+        /* background-color: red; */
+    }
+    
+    .nav-item:hover, .active{
+        color:$base-color;
+        // transform: scale(1.3,1.3);
+        text-emphasis-color: white;
+    }
+
+}
+

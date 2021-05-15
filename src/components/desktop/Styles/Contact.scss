@@ -1,0 +1,72 @@
+@font-face{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    src: url('../../../assets/fonts/impact.ttf');
+}
+
+$base-color:#0B3150;
+$secondary-color:#A9BCC1;
+$primary-color:#FAE3AD;
+
+.contact{
+    position:relative;
+    font-family: 'Courier New', Courier, monospace;
+    // width:100vw;
+    padding:10vh;
+    background-color: "grey";
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items:center;
+    background-image: linear-gradient(to left, $primary-color 10%,white,$primary-color 10%);
+
+    .detail{
+        position:relative;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items:center;
+
+        #mail{
+            height: 8vh;
+            width: 8vh;
+            padding-left:2vh;
+            cursor: pointer;
+        }
+        
+        #linkedin{
+            height: 10.5vh;
+            width: 10.5vh;
+            padding-left:2vh;
+            cursor: pointer;
+        }
+
+        #mail:hover, #linkedin:hover{
+            transform: scale(1.2,1.2);
+        }
+    }
+
+    .show{
+        position:relative;
+        top:10px;
+        cursor: pointer;
+        display: block;
+
+        i:hover{
+            transform: scale(1.2,1.2);
+        }
+    }
+
+}
+
+#footer{
+    position:relative;
+    height: 5vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    color:$primary-color;
+    font-family:'Courier New', Courier, monospace;
+    background-color: $base-color;
+}
